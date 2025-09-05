@@ -35,9 +35,6 @@ class PersonList {
 			people.add(newPerson);
 		}
 		myReader.close();
-
-
-
 	}
 
 	public void display(FileWriter myWriter) throws IOException {
@@ -71,35 +68,6 @@ class PersonList {
 		return -1;
 
 	}
-
-
-	public static void main(String[] args) {
-		PersonList personList = new PersonList();
-			try {
-
-			File file = new File("data.txt");
-			Scanner scanner = new Scanner(file);
-
-			personList.store(scanner);
-
-		} catch(FileNotFoundException e) {
-			System.out.println("An error occurred while reading.");
-			e.printStackTrace();
-		}
-		try {
-			FileWriter writer = new FileWriter("filename.txt");
-			personList.display(writer);
-			personList.find("12345");
-		} catch (IOException e) {
-			System.out.println("An error occurred while reading.");
-			e.printStackTrace();
-		}
-			
-		int index = personList.find("11111");
-		System.out.println("The index: " + index);
-
-
-	}
-
 }
+
 

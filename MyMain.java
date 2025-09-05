@@ -63,8 +63,7 @@ public class MyMain {
 
 
 	public static void main(String[] args)  {
-		String sid = "12345";
-		LinkedList<Person> personList = new LinkedList<Person>();
+			LinkedList<Person> personList = new LinkedList<Person>();
 		try {
 			File file = new File("data.txt");
 			Scanner myReader = new Scanner(file);
@@ -85,8 +84,10 @@ public class MyMain {
 			e.printStackTrace();
 		}
 
-		int index = find(sid,personList);
-		System.out.println(index);
+			System.out.println(find("12345",personList));
+
+			System.out.println(find("11111",personList));
+			System.out.println(find("67890",personList));
 
 
 
